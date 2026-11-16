@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="富文本编辑器图标">
+  <rect width="64" height="64" rx="12" fill="#6b3fa0"/>
+  <rect x="10" y="14" width="44" height="36" rx="5" fill="#ffffff" opacity=".14"/>
+  <path d="M18 44l8-22h6l8 22h-5l-1.7-5H25l-1.7 5zm7.6-9h6.6L28.9 25z" fill="#ffffff"/>
+  <rect x="40" y="36" width="10" height="4" rx="2" fill="#ffffff" opacity=".85"/>
+</svg>

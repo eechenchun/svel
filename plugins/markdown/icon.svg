@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Markdown 编辑器图标">
+  <rect width="64" height="64" rx="12" fill="#1a5fb4"/>
+  <rect x="10" y="14" width="44" height="36" rx="5" fill="#ffffff" opacity=".14"/>
+  <path d="M16 44V22h5l6 8 6-8h5v22h-5V31l-6 8-6-8v13z" fill="#ffffff"/>
+  <path d="M47 22v14h5l-7 9-7-9h5V22z" fill="#ffffff" opacity=".85"/>
+</svg>

@@ -1,0 +1,66 @@
+{
+  "name": "SvelCMS 默认主题",
+  "slug": "default",
+  "version": "1.1.0",
+  "author": "SvelCMS",
+  "description": "极简两栏、零脚本、优先可读性的默认主题",
+  "thumbnail": "thumbnail.svg",
+  "settings": [
+    {
+      "key": "per_page",
+      "label": "首页每页文章数（0 跟随站点设置）",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "key": "footer_text",
+      "label": "页脚版权文字（留空用站点设置）",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "accent_color",
+      "label": "强调色",
+      "type": "text",
+      "default": "#1a5fb4"
+    },
+    {
+      "key": "show_tagline",
+      "label": "显示副标题",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "显示"
+        },
+        {
+          "value": "0",
+          "label": "隐藏"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "show_views",
+      "label": "显示阅读数",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "显示"
+        },
+        {
+          "value": "0",
+          "label": "隐藏"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "excerpt_length",
+      "label": "列表摘要字数",
+      "type": "number",
+      "default": 140
+    }
+  ]
+}

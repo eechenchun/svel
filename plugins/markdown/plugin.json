@@ -1,0 +1,63 @@
+{
+  "name": "Markdown 编辑器",
+  "slug": "markdown",
+  "version": "1.1.0",
+  "author": "SvelCMS",
+  "description": "三栏 Markdown 编辑器：左侧源码、中间预览、右侧目录，滚动同步，安装后默认启用",
+  "requires": "1.0.0",
+  "requires_hook_version": 1,
+  "hooks": [
+    "admin_editor",
+    "admin_editor_assets"
+  ],
+  "priority": 20,
+  "entry": "plugin.php",
+  "default": true,
+  "icon": "icon.svg",
+  "settings": [
+    {
+      "key": "show_toolbar",
+      "label": "显示工具栏",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "显示"
+        },
+        {
+          "value": "0",
+          "label": "隐藏"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "show_outline",
+      "label": "显示右侧目录",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "显示"
+        },
+        {
+          "value": "0",
+          "label": "隐藏"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "preview_delay",
+      "label": "预览延迟（毫秒）",
+      "type": "number",
+      "default": 300
+    },
+    {
+      "key": "tab_size",
+      "label": "Tab 缩进空格数",
+      "type": "number",
+      "default": 4
+    }
+  ]
+}

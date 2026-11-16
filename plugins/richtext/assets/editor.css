@@ -1,0 +1,32 @@
+/* 富文本编辑器样式 */
+.rteditor { border: 1px solid #dfe3e8; border-radius: 8px; overflow: hidden; background: #fff; }
+.rteditor-bar {
+  display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 8px;
+  background: #f7f8fa; border-bottom: 1px solid #e6e8eb;
+}
+.rteditor-bar button {
+  border: 1px solid #dfe3e8; background: #fff; border-radius: 4px;
+  padding: 3px 9px; font-size: 12px; cursor: pointer; color: #333;
+}
+.rteditor-bar button:hover { background: #eef1f5; }
+.rteditor-area {
+  min-height: 460px; max-height: 640px; overflow: auto; padding: 16px 18px;
+  font-size: 15.5px; line-height: 1.8; outline: 0;
+}
+.rteditor-area:empty:before {
+  content: '在这里写正文…';
+  color: #a5adb6;
+}
+.rteditor-area h2 { font-size: 21px; margin: 22px 0 10px; }
+.rteditor-area h3 { font-size: 17px; margin: 18px 0 8px; }
+.rteditor-area blockquote { margin: 0 0 12px; padding: 6px 12px; border-left: 3px solid #dfe3e8; color: #55606b; background: #fafbfc; }
+.rteditor-area pre { background: #f6f8fa; padding: 10px 12px; border-radius: 6px; overflow-x: auto; }
+.rteditor-area img { max-width: 100%; height: auto; }
+.rteditor-foot {
+  display: flex; justify-content: space-between; padding: 5px 10px;
+  font-size: 12px; color: #8a9199; background: #f7f8fa; border-top: 1px solid #e6e8eb;
+}
+.rteditor-warn {
+  margin: 0; padding: 8px 12px; font-size: 12.5px;
+  background: #fff8e5; color: #7a5300; border-bottom: 1px solid #f3dfae;
+}

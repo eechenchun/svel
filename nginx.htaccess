@@ -1,0 +1,36 @@
+# SvelCMS 由程序维护：干净 URL（L1）+ 数据目录封禁
+# 该文件被站点 vhost 的 location / 以 include 方式载入
+try_files $uri $uri/ /index.php?$args;
+
+# 缓存、日志、规则片段不允许直接下载
+if ($uri ~ ^/storage/(cache|logs|rewrite)/) {
+    return 403;
+}
+
+# 内核、主题、插件、模板与上传目录中的 PHP 一律不允许直接执行
+if ($uri ~ ^/(app|themes|plugins|views|storage)/.*\.php$) {
+    return 403;
+}
+
+# 源码包、市场目录、部署文档、安装器与配置文件不公开
+if ($uri ~ ^/(dist|shichang|docs)/) {
+    return 403;
+}
+if ($uri ~ ^/(README\.md|install\.php|install\.lock|config\.php|\.user\.ini|\.htaccess|\.git)($|/)) {
+    return 403;
+}
+if ($uri ~* \.md$) {
+    return 403;
+}
+
+# 数据库文件兜底
+if ($uri ~* \.(db|sqlite)$) {
+    return 403;
+}
+
+# 静态资源安全头；PHP 响应由程序自身设置，避免重复
+add_header X-Content-Type-Options nosniff always;
+add_header X-Frame-Options SAMEORIGIN always;
+add_header Referrer-Policy strict-origin-when-cross-origin always;
+add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
+add_header Content-Security-Policy "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'" always;

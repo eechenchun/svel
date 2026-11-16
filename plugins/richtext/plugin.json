@@ -1,0 +1,57 @@
+{
+  "name": "富文本编辑器",
+  "slug": "richtext",
+  "version": "1.1.0",
+  "author": "SvelCMS",
+  "description": "所见即所得编辑器，产出 HTML（内核按白名单过滤）。默认不启用，启用后会接管编辑区",
+  "requires": "1.0.0",
+  "requires_hook_version": 1,
+  "hooks": [
+    "admin_editor",
+    "admin_editor_assets"
+  ],
+  "priority": 30,
+  "entry": "plugin.php",
+  "default": false,
+  "icon": "icon.svg",
+  "settings": [
+    {
+      "key": "show_toolbar",
+      "label": "显示工具栏",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "显示"
+        },
+        {
+          "value": "0",
+          "label": "隐藏"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "paste_plain",
+      "label": "粘贴时只保留纯文本",
+      "type": "select",
+      "options": [
+        {
+          "value": "1",
+          "label": "是"
+        },
+        {
+          "value": "0",
+          "label": "否"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "key": "min_height",
+      "label": "编辑区最小高度（像素）",
+      "type": "number",
+      "default": 460
+    }
+  ]
+}
